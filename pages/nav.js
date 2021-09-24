@@ -1,28 +1,16 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Layout from '../components/Layout'
+import Title from '../components/Title'
 
 export default function Home() {
   return (
     <Layout>
-      <Head>
-        <title>Design React Hook</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <main>
-        <img className="cover" src="/images/hooks-logo.png" alt="Hooks" />
-
-        <h1 className="title">
-          Design <i>React</i> Hooks<br /> the Right Way
-        </h1>
-
-        <p className="description">
-          Discover solutions for effectively designing your React Hooks
-        </p>
+        <Title />
 
         <div className="grid">
-          <Link href="/toc">
+          <Link href="/chapter">
             <a className="card">
               <h3>Table of Content &rarr;</h3>
               <p>Find out book outlines and covered materials.</p>

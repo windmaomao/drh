@@ -1,26 +1,29 @@
-import Layout from '../components/Layout'
 import Link from 'next/link'
 
-export default function Index() {
+export default function Title({ small }) {
   return (
-    <Layout>
-      <main>
-        <h1 className="title">
-          Design <i>React</i> Hooks<br /> the Right Way
-        </h1>
+    <>
+      <Link href="/">
+        <a>
+          <img className="logo" src="/images/hooks-logo.png" alt="Hooks" />
+        </a>
+      </Link>
 
-        <p className="description">
-          Discover solutions for effectively designing your React Hooks
-        </p>
+      <h1 className="title">
+        Design <i>React</i> Hooks<br /> the Right Way
+      </h1>
 
-        <img src="/images/hooks-logo.png" alt="Hooks" width="96" />
+      <p className="description">
+        Discover solutions for effectively designing your React Hooks
+      </p>
 
-        <Link href="/nav">
-          <button>Let's Explore!</button>
-        </Link>
-      </main>
-      
       <style jsx>{`
+        .logo {
+          width: 96px;
+          height: 96px;
+          margin: 1rem;
+        }
+
         .title a {
           color: #0070f3;
           text-decoration: none;
@@ -47,12 +50,12 @@ export default function Index() {
 
         .description {
           line-height: 1.5;
-          font-size: 1.5rem;
+          font-size: ${small ? '1.2' : '1.5'}rem;
           font-style: italic;
           font-weight: 300;
         }
 
       `}</style>
-    </Layout>
+    </>
   )
 }
