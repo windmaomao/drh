@@ -18,6 +18,12 @@ export default function Index() {
         <Link href="/nav">
           <button>Let's Explore!</button>
         </Link>
+
+        <p className="note">
+          While you are using the site, 
+          clicking the icon anytime to 
+          get back to the home page.
+        </p>
       </main>
       
       <style jsx>{`
@@ -50,6 +56,12 @@ export default function Index() {
           font-size: 1.5rem;
           font-style: italic;
           font-weight: 300;
+        }
+
+        .note {
+          margin: 2rem;
+          max-width: 300px;
+          font-size: 0.9rem;
         }
 
       `}</style>

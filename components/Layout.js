@@ -68,8 +68,8 @@ export default function Layout({ children }) {
           cursor: pointer;
         }
 
-        a.back {
-          float: right;
+        a:hover {
+          color: #eb670f;
         }
 
         .cover {
@@ -159,21 +159,6 @@ export default function Layout({ children }) {
 
         .logo {
           height: 4em;
-        }
-
-        .toc h1 {
-          margin-top: 4rem;
-          font-size: 2rem;
-        }
-
-        .toc li {
-          font-family: Serif, Times New Rome;
-          font-size: 1.5rem;
-          line-height: 3rem;
-        }
-
-        .toc a:hover {
-          color: #eb670f;
         }
 
         @media (max-width: 600px) {
