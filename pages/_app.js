@@ -1,5 +1,6 @@
-import env from './env'
+import settings from 'settings'
+import { t } from 'i18n'
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} {...env} />
+  return <Component {...pageProps} {...settings} t={t} />
 }
