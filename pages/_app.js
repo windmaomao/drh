@@ -1,3 +1,5 @@
+import env from './env'
+
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} base="/drh" />
+  return <Component {...pageProps} {...env} />
 }

@@ -69,9 +69,3 @@ export default function Index({ base, locale }) {
     </Layout>
   )
 }
-
-export async function getStaticProps() {
-  return {
-    props: { locale: 'en' }
-  }
-}
