@@ -1,13 +1,12 @@
-import Head from 'next/head'
 import Link from 'next/link'
 import Layout from '../components/Layout'
 import Title from '../components/Title'
 
-export default function Home() {
+export default function Home({ base }) {
   return (
-    <Layout>
+    <Layout base={base}>
       <main>
-        <Title />
+        <Title base={base} />
 
         <div className="grid">
           <Link href="/chapter">

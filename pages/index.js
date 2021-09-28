@@ -1,9 +1,10 @@
-import Layout from '../components/Layout'
 import Link from 'next/link'
+import Layout from 'components/Layout'
 
-export default function Index() {
+export default function Index({ base, locale }) {
+  console.log(locale)
   return (
-    <Layout>
+    <Layout base={base}>
       <main>
         <h1 className="title">
           Design <i>React</i> Hooks<br /> the Right Way
@@ -13,7 +14,7 @@ export default function Index() {
           Discover solutions for effectively designing your React Hooks
         </p>
 
-        <img src="/images/hooks-logo.png" alt="Hooks" width="96" />
+        <img src={`${base}/images/hooks-logo.png`} alt="Hooks" width="96" />
 
         <Link href="/nav">
           <button>Let's Explore!</button>
@@ -42,7 +43,7 @@ export default function Index() {
           margin: 0;
           line-height: 1.15;
           font-family: Serif, Times New Roman;
-          font-size: 4rem;
+          font-size: 3rem;
           font-weight: 700;
         }
 
@@ -67,4 +68,10 @@ export default function Index() {
       `}</style>
     </Layout>
   )
+}
+
+export async function getStaticProps() {
+  return {
+    props: { locale: 'en' }
+  }
 }

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Layout from '../components/TocLayout'
+import TocLayout from '../components/TocLayout'
 
 // const tocTitles = {
 //   i: "I. Introduction",
@@ -42,13 +42,13 @@ import Layout from '../components/TocLayout'
 //   { section: 'iii', chapters: toc3 }
 // ]
 
-export default function TOC() {
+export default function TOC({ base }) {
   return (
-    <Layout>
+    <TocLayout base={base}>
       <h1>I. Introduction</h1>
       <ul>
         <li>
-          <Link href="">
+          <Link href="/chapters/1-function-component">
             <a>1. Function Component</a>
           </Link>
         </li>
@@ -123,6 +123,6 @@ export default function TOC() {
           </ul>
         </div>
       ))} */}
-    </Layout>
+    </TocLayout>
   )
 }

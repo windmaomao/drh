@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-export default function Layout({ children }) {
+export default function Layout({ children, base }) {
   return (
     <div className="container">
       <Head>
@@ -11,13 +11,15 @@ export default function Layout({ children }) {
       {children}
 
       <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
+        <a 
+          href="https://www.packtpub.com/" target="_blank"
           rel="noopener noreferrer"
         >
-          Published by {''}
-          <img src="/images/packt-small.png" alt="Packt" className="logo" />
+          Published by 
+          <img 
+            src={`${base}/images/packt-small.png`}
+            alt="Packt" className="logo"
+          />
         </a>
       </footer>
 

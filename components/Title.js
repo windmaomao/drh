@@ -1,11 +1,15 @@
 import Link from 'next/link'
 
-export default function Title({ small }) {
+export default function Title({ base }) {
   return (
     <>
       <Link href="/">
         <a>
-          <img className="logo" src="/images/hooks-logo.png" alt="Hooks" />
+          <img
+            className="logo"
+            src={`${base}/images/hooks-logo.png`}
+            alt="Hooks"
+          />
         </a>
       </Link>
 
@@ -39,7 +43,7 @@ export default function Title({ small }) {
           margin: 0;
           line-height: 1.15;
           font-family: Serif, Times New Roman;
-          font-size: 4rem;
+          font-size: 3rem;
           font-weight: 700;
         }
 
@@ -50,7 +54,7 @@ export default function Title({ small }) {
 
         .description {
           line-height: 1.5;
-          font-size: ${small ? '1.2' : '1.5'}rem;
+          font-size: 1.2rem;
           font-style: italic;
           font-weight: 300;
         }

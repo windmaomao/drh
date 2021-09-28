@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import TocLayout from '../../components/TocLayout'
 
-export default function TOC() {
+export default function Chapter({ base }) {
   return (
-    <TocLayout>
+    <TocLayout base={base}>
       <div style={{ textAlign: "center" }}>
-        <img src="/images/ch04.png" width="300px" />
+        <img src={`${base}/images/ch04.png`} width="300px" />
       </div>
       <h1>
         4. <i>Use State</i> to Dispatch States

@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import TocLayout from '../../components/TocLayout'
 
-export default function TOC() {
+export default function Chapter({ base }) {
   return (
-    <TocLayout>
+    <TocLayout base={base}>
       <div style={{ textAlign: "center" }}>
-        <img src="/images/ch10.png" width="150px" />
+        <img src={`${base}/images/ch10.png`} width="150px" />
       </div>
       <h1>
         10. From <i>Javascript</i>, <i>CSS</i>&nbsp;
