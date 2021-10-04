@@ -16,7 +16,7 @@ export default function Home({ base }) {
             </a>
           </Link>
 
-          <Link href="/cases">
+          <Link href="/demos">
             <a className="card">
               <h3>Demos &rarr;</h3>
               <p>Take a spin at book demos and examples.</p>
