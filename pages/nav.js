@@ -9,20 +9,19 @@ export default function Home({ base }) {
         <Title base={base} />
 
         <div className="grid">
-          <Link href="/chapter">
+          <Link href="/chapters">
             <a className="card">
               <h3>Table of Content &rarr;</h3>
               <p>Find out book outlines and covered materials.</p>
             </a>
           </Link>
 
-          <a
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
+          <Link href="/cases">
+            <a className="card">
+              <h3>Demos &rarr;</h3>
+              <p>Take a spin at book demos and examples.</p>
+            </a>
+          </Link>
         </div>
       </main>
     </Layout>

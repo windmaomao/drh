@@ -5,21 +5,20 @@ export default function Chapter({ base }) {
   return (
     <TocLayout base={base}>
       <div style={{ textAlign: "center" }}>
-        <img src={`${base}/images/ch04.png`} width="300px" />
+        <img src={`${base}/images/ch10.png`} width="150px" />
       </div>
       <h1>
-        4. <i>Use State</i> to Dispatch States
+        10. From <i>Javascript</i>, <i>CSS</i>&nbsp;
+        and <i>HTML</i> to <i>React</i>
       </h1>
-      <Link href="/chapter">
+      <Link href="/chapters">
         <a className="back">←</a>
       </Link>
       <ul>
-        <li>State in React</li>
-        <li>useState Design</li>
-        <li>Dispatching States</li>
-        <li>Test Drive useState</li>
-        <li>useState Examples</li>
-        <li>Appendix</li>
+        <li><i>Javascript ES6</i></li>
+        <li><i>CSS-in-JS</i></li>
+        <li><i>HTML</i> to <i>JSX</i></li>
+        <li><i>React Fiber</i></li>
       </ul>
     </TocLayout>
   )

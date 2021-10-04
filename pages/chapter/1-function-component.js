@@ -10,7 +10,7 @@ export default function Chapter({ base }) {
       <h1>
         1. Introducing Function Component
       </h1>
-      <Link href="/chapter">
+      <Link href="/chapters">
         <a className="back">←</a>
       </Link>
       <ul>
