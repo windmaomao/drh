@@ -10,8 +10,8 @@ export default function TOC({ base }) {
       <h1>Demos</h1>
       <ul>
         <li>
-          <Link href="">
-            <a>1. Coding <i>React</i> in online editors</a>
+          <Link href="/demo/1-play-react-editors">
+            <a>1. Play <i>React</i> in online editors</a>
           </Link>
         </li>
         <li>

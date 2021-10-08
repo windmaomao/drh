@@ -199,13 +199,57 @@ function Title3() {
   )
 }
 
+let prev
+function _onM(callback, value) {
+  if (value === prev) return 
+  callback()
+  prev = value
+}
+
+function Changed({ count }) {
+  let flag = 'N'
+  _onM(() => { flag = 'Y' }, count)
+  return <span>{flag}</span>
+}
+
+function Title4() {
+  let countH = _getM2(0, 'H')
+  let countW = _getM2(0, 'W')
+  const [, update] = useState(0)
+
+  const onClickH = () => {
+    countH = countH + 1
+    _setM2(countH, 'H', () => {
+      update(v => v + 1)
+    })
+  }
+
+  const onClickW = () => {
+    countW = countW + 1
+    _setM2(countW, 'W', () => {
+      update(v => v + 1)
+    })
+  }
+
+  return (
+    <>
+      <button onClick={onClickH}>+</button>&nbsp;
+      <span>Hello+{countH}</span>
+      <Changed count={countH} />
+      <button onClick={onClickW}>+</button>&nbsp;
+      <span>World+{countW}</span>
+    </>
+  )
+}
+
+
 export default function Demo({ base }) {
   return (
     <TocLayout base={base}>
-      <Link href="/chapters">
+      <Link href="/demos">
         <a className="back">←</a>
       </Link>
-      <h1>Craft state in <br/><i>React</i> function component</h1>
+      <h1>Craft state in function</h1>
       <h3>Case 1: Plain variable in function</h3>
       <Title1 />
       <pre>{sketch1}</pre>
@@ -218,6 +262,8 @@ export default function Demo({ base }) {
       <Title3 />
       <pre>{sketch3}</pre>
       <pre>{code3}</pre>
+      <h3>Case 4: Listen to state change</h3>
+      <Title4 />
 
       <style jsx global>{`
         button {
