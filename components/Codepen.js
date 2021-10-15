@@ -1,12 +1,12 @@
 const src = id => 
-`https://codepen.io/windmaomao/embed/${id}?default-tab=js%2Cresult&theme-id=light&editable=true`
+`https://codepen.io/windmaomao/embed/${id}?default-tab=result&theme-id=dark&editable=true`
 const href = id => 
   `https://codepen.io/windmaomao/pen/${id}`
 
-export default function Codepen({ id, title = "" }) {
+export default function Codepen({ id, title = "", height="300" }) {
   return (
     <iframe
-      height="300"
+      height={height}
       style={{ width: "100%" }}
       scrolling="no"
       title={title}

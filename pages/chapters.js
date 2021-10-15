@@ -5,7 +5,7 @@ export default function TOC({ base }) {
   return (
     <TocLayout base={base}>
       <Link href="/nav">
-        <a className="back">← Navigation</a>
+        <a className="back">← Menu</a>
       </Link>
       <h1>I. Introduction</h1>
       <ul>
@@ -15,8 +15,8 @@ export default function TOC({ base }) {
           </Link>
         </li>
         <li>
-          <Link href="">
-            <a>2. Adding States Across Functions</a>
+          <Link href="/chapter/2-craft-states">
+            <a>2. Crafting States in Function</a>
           </Link>
         </li>
         <li>
@@ -60,7 +60,7 @@ export default function TOC({ base }) {
           </Link>
         </li>
       </ul>
-      <h1>III. Appendix</h1>
+      <h1>III. Resources</h1>
       <ul>
         <li>
           <Link href="/chapter/10-javascript-css-html-react">

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import TocLayout from '../../components/TocLayout'
-import Codepen from './Codepen'
+import Codepen from '../../components/Codepen'
 
 export default function Demo({ base }) {
   return (

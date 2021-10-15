@@ -1,12 +1,9 @@
-import Link from 'next/link'
 import Layout from './Layout'
-import Title from './Title'
 
 export default function TocLayout({ children, base }) {
   return (
     <Layout base={base}>
       <main>
-        <Title base={base} />
         <section className="toc">
           {children}
         </section>
@@ -23,18 +20,36 @@ export default function TocLayout({ children, base }) {
           font-size: 2rem;
         }
 
+        .toc h2 {
+          margin-top: 2rem;
+          font-size: 1.6rem;
+        }
+
+        .toc h3 {
+          margin-top: 1.5rem;
+          font-size: 1.3rem;
+        }
+
         .toc ul {
           margin: 2rem;
         }
 
         .toc li {
           font-family: Serif, Times New Rome;
-          font-size: 1.5rem;
-          line-height: 3.5rem;
+          font-size: 1.2rem;
+          line-height: 2.25rem;
         }
 
         main {
           max-width: 600px;
+          padding: 1rem;
+        }
+
+        main p {
+          line-height: 1.5rem;
+        }
+
+        .banner {
         }
       `}</style>
     </Layout>

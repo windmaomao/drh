@@ -26,7 +26,7 @@ export default function Layout({ children, base }) {
       <style jsx global>{`
         .container {
           min-height: 100vh;
-          padding: 0 0.5rem;
+          padding: 0 1rem;
           display: flex;
           flex-direction: column;
           justify-content: center;
